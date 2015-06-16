@@ -21,10 +21,19 @@ class EventManagerAddTest extends \PHPUnit_Framework_TestCase
         $this->assertInstanceOf('\\DateTime', $event->date);
     }
 
-    public function testAddMultipleEvents() {
+    public function testAddMultipleEvents()
+    {
         $this->eventManager->addEvent("First event", new \DateTime(), 1);
         $this->eventManager->addEvent("Second event", new \DateTime(), 2);
-        
+
         $this->assertEquals(2, $this->eventManager->getEventList()->count());
+    }
+
+    public function testCorrectDay()
+    {
+        $today = new \DateTime();
+        $event = $this->eventManager->addEvent("First Event", $today, 50);
+
+        $this->assertEquals($event->getDay(), $today->format('d'));
     }
 }

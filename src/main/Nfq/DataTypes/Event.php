@@ -22,4 +22,9 @@ class Event
 
     /** @var int $length */
     public $length;
+
+    public function getDay()
+    {
+        return $this->date->format('d');
+    }
 }
