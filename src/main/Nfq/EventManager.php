@@ -2,6 +2,8 @@
 
 namespace Nfq;
 
+use Nfq\DataTypes\EventList;
+
 /**
  * Class EventManager
  * @package Nfq
@@ -9,7 +11,16 @@ namespace Nfq;
 class EventManager
 {
     /**
-     * @var Events[]
+     * @var EventList
      */
-    protected $events;
+    private $events;
+
+    public function getEventList()
+    {
+        if (empty($this->events)) {
+            $this->events = new EventList();
+        }
+
+        return $this->events;
+    }
 }
