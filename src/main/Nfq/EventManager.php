@@ -8,5 +8,8 @@ namespace Nfq;
  */
 class EventManager
 {
-
+    /**
+     * @var Events[]
+     */
+    protected $events;
 }
