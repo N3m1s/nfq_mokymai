@@ -12,4 +12,9 @@ class EventManager
      * @var Events[]
      */
     protected $events;
+
+    public function addEvent($eventName, $date)
+    {
+
+    }
 }
