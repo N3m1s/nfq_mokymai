@@ -15,6 +15,9 @@ class EventManager
      */
     private $events;
 
+    /**
+     * @return EventList
+     */
     public function getEventList()
     {
         if (empty($this->events)) {
@@ -22,5 +25,10 @@ class EventManager
         }
 
         return $this->events;
+    }
+
+    public function addEvent($eventName, $date)
+    {
+
     }
 }
