@@ -35,7 +35,7 @@ class EventManager
         $event->date = $date;
         $event->length = $length;
 
-        $this->events->append($event);
+        $this->getEventList()->append($event);
 
         return $event;
     }

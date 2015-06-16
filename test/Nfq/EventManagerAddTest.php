@@ -13,11 +13,11 @@ class EventManagerAddTest extends \PHPUnit_Framework_TestCase
 
     public function testAddEvent()
     {
-        $event = $this->eventManager->addEvent("Todays Special", new \DateTime());
+        $name = "Todays Special";
+        $event = $this->eventManager->addEvent($name, new \DateTime(), 15);
         $this->assertInstanceOf('\\Nfq\\DataTypes\\Event', $event);
 
-        $this->assertClassHasAttribute('name', $event);
-        $this->assertClassHasAttribute('length', $event);
-        $this->assertClassHasAttribute('date', $event);
+        $this->assertEquals($name, $event->name);
+        $this->assertInstanceOf('\\DateTime', $event->date);
     }
 }
