@@ -14,5 +14,12 @@ namespace Nfq\DataTypes;
  */
 class Event
 {
+    /** @var string $name */
+    public $name;
 
+    /** @var \DateTime $date */
+    public $date;
+
+    /** @var int $length */
+    public $length;
 }
