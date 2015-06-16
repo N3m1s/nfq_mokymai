@@ -15,7 +15,9 @@ class EventManagerAddTest extends \PHPUnit_Framework_TestCase
     {
         $event = $this->eventManager->addEvent("Todays Special", new \DateTime());
         $this->assertInstanceOf('\\Nfq\\DataTypes\\Event', $event);
+
         $this->assertClassHasAttribute('name', $event);
+        $this->assertClassHasAttribute('length', $event);
         $this->assertClassHasAttribute('date', $event);
     }
 }

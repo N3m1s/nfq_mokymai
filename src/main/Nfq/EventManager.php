@@ -1,6 +1,7 @@
 <?php
 
 namespace Nfq;
+use Nfq\DataTypes\Event;
 
 /**
  * Class EventManager
@@ -15,6 +16,7 @@ class EventManager
 
     public function addEvent($eventName, $date)
     {
-
+        $event = new Event();
+        return $event;
     }
 }
