@@ -1,6 +1,7 @@
 <?php
 
 namespace Nfq;
+use Nfq\DataTypes\Event;
 
 use Nfq\DataTypes\EventList;
 
@@ -28,8 +29,15 @@ class EventManager
         return $this->events;
     }
 
-    public function addEvent($eventName, $date)
+    public function addEvent($eventName, $date, $length)
     {
+        $event = new Event();
+        $event->name = $eventName;
+        $event->date = $date;
+        $event->length = $length;
 
+        $this->getEventList()->append($event);
+
+        return $event;
     }
 }
