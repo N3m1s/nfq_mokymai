@@ -17,9 +17,10 @@ class EventManager
     private $events;
 
     /**
+     * @param \DateTime $date
      * @return EventList
      */
-    public function getEventList()
+    public function getEventList(\DateTime $date = null)
     {
         if (empty($this->events)) {
             $this->events = new EventList();

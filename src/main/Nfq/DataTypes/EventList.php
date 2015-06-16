@@ -14,5 +14,13 @@ namespace Nfq\DataTypes;
  */
 class EventList extends \ArrayIterator
 {
+    /**
+     * @param \Closure $c
+     * @return static
+     */
+    public function filter(\Closure $c)
+    {
+        return new static(array_filter($this->getArrayCopy(), $c));
+    }
 
 }
