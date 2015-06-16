@@ -1,0 +1,12 @@
+{
+    "name": "nfq/nfq_mokymai",
+    "require": {
+        "phpunit/phpunit": "^4.7"
+    },
+    "authors": [
+        {
+            "name": "Paulius Darius",
+            "email": "pauliuskm@gmail.com"
+        }
+    ]
+}
